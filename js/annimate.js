@@ -1,10 +1,10 @@
-﻿
+
 var endFlipFoxkeh = function(){
 
-	////foxkehという名前をslidein-foxkehという階層の中のimgに命名する。
+	//foxkehという名前をslidein-foxkehという階層の中のimgに命名する。
 	var foxkeh = document.querySelector("#slidein-foxkeh img");
 	
-	//
+	//foxkehのanimationedイベントのendFlipFoxkehというインターフェースを外す。
 	foxkeh.removeEventListener("animationend", endFlipFoxkeh);
 	
 	//foxkehのクラス属性を""(空)にする
@@ -16,7 +16,7 @@ var endSlideinFoxkehAndStartFlipFoxkeh = function(){
 	//foxkehという名前をslidein-foxkehという階層の中のimgに命名する。
 	var foxkeh = document.querySelector("#slidein-foxkeh img");
 
-	//
+	////foxkehのanimationedイベントのendSlideinandStartFlipFoxkehというインターフェースを外す。
 	foxkeh.removeEventListener("animationend", endSlideinFoxkehAndStartFlipFoxkeh);
 	
 	//foxkehに"animationend"というイベントが起きたら、endFlipFoxkehに通知を出す。
@@ -41,9 +41,9 @@ var startSlideinFoxkeh = function(){
 
 
 
-//slideinFoxkehButtonという名前をslidein-foxkehという階層の中のbuttonに命名する。
+//slidein-foxkehという階層の中のbuttonを、slideinFoxkehButtonと宣言する。
 var slideinFoxkehButton = document.querySelector("#slidein-foxkeh button");
 
-//slideinFoxkehButtonにclickというイベントが起きたらstartSlideinFoxkehに移る。
+//slideinFoxkehButtonにclickというイベントが起きたらstartSlideinFoxkehに通知を出す。
 slideinFoxkehButton.addEventListener("click", startSlideinFoxkeh);
 
